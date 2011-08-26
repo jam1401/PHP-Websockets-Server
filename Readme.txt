@@ -21,3 +21,8 @@ modifications as directed in the file, save it without the changethis extension 
 the following command
 
 php -q WSdaemon.php
+
+
+Things not completed
+
+At the moment there is no support for either extensions or chunked data. I will add these as soon as I can get to it
