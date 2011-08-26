@@ -1,5 +1,4 @@
 <?php
-require_once "messagetranscoder.interface.php";
     interface WSApp {
     	/**
 		 * Set the set the Websocket protocol class
