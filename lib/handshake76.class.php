@@ -1,7 +1,6 @@
 <?php
 require_once 'wsuser.class.php';
 require_once 'handshaker.interface.php';
-require_once 'basictranscoder.class.php';
 require_once 'protocol76.class.php';
 
 /**
