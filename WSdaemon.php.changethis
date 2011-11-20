@@ -55,6 +55,7 @@ if($argc > 0) {
 }
 
 //fork the process to work in a daemonized environment
+if (! function_exists('pcntl_fork')) die('PCNTL functions not available on this PHP installation');
 logToFile("Status: WS starting up.\n");
 $pid = pcntl_fork();
 if($pid == -1) {
