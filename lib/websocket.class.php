@@ -148,7 +148,11 @@ class WebSocket {
 	private function getHandshaker($headers) {
 		// Lets check which handshaker we need
 		if(isset($headers['Sec-WebSocket-Version'])) {
-			if($headers['Sec-WebSocket-Version'] === '8') {
+			// The HyBi protocol is still in draft form but each version now just seems
+			// to be semantic changes in the specification
+			// Forcing version numbers above 8 to be HyBi, things might fail if actual protocol
+			// changes are made but at least the resulting errors will be more informative
+			if($headers['Sec-WebSocket-Version'] >= '8') { 
 				// This is the HyBI handshaker
 				return new HandshakeHyBi();
 			}
